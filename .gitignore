@@ -1,4 +1,4 @@
-﻿# Secrets and environment
+# Secrets and environment
 .env
 .env.*
 !.env.example
@@ -17,7 +17,7 @@ data/
 *.joblib
 
 # Exclude until reviewed
-models/
+/models/
 reports/
 
 # Dashboard excluded from this project release
