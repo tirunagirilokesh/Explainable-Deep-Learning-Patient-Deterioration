@@ -78,7 +78,21 @@ The project workflow consists of:
 
 ### 1. Artificial Neural Network (ANN)
 
-ANN models are used as baseline approaches for comparison.
+An Artificial Neural Network (ANN) was developed as the baseline model
+for predicting intraoperative hypotension.
+
+The ANN was trained using flattened 30-minute historical signal windows
+containing 900 observations across five physiological signals.
+
+Two ANN versions were evaluated:
+
+| Model | Validation AUROC | Validation AUPRC | Validation Brier |
+|---|---:|---:|---:|
+| ANN V1 | 0.6025 | 0.2282 | 0.2884 |
+| ANN V2 | 0.5928 | 0.2105 | 0.2540 |
+
+These results are validation results, not independent test results.
+The ANN provides a baseline for comparison with the LSTM approach.
 
 ### 2. Long Short-Term Memory (LSTM)
 
@@ -136,3 +150,13 @@ Patient-Deterioration-Prediction/
 ├── requirements-notebook.txt
 ├── .gitignore
 └── README.md
+
+## Future Work
+
+- Improve probability calibration across all prediction horizons.
+- Investigate methods to reduce false alarms while maintaining sensitivity.
+- Explore Temporal Convolutional Networks (TCNs) and other deep learning architectures.
+- Improve prediction consistency across the 5, 10, 15, and 30-minute horizons.
+- Expand evaluation using additional patient cohorts and external datasets.
+- Improve LIME and counterfactual explanations for clinical interpretability.
+- Evaluate the system prospectively before considering clinical deployment.
