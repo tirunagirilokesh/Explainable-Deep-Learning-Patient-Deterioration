@@ -1,0 +1,35 @@
+﻿# Secrets and environment
+.env
+.env.*
+!.env.example
+
+# Python environment and cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local datasets and patient-level files
+data/
+*.npz
+*.pkl
+*.joblib
+
+# Exclude until reviewed
+models/
+reports/
+
+# Dashboard excluded from this project release
+dashboard/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local inspection and API test files
+project_structure.txt
+test_api.py
+test_prediction.py
